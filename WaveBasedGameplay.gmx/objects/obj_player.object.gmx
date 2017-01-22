@@ -81,7 +81,8 @@ display_mouse_set(display_get_width()/2,display_get_height()/2);
 
 
 
-
+text = instance_create(rect_x + rect_w/2, rect_y + rect_h / 2,obj_text);
+text.image_index = 0;
 
 
 </string>
@@ -402,6 +403,18 @@ else {
 
 //if (path_index == -1)
 //left click
+if (minigame)
+    if (instance_exists(text))
+        with (text)
+            instance_destroy();
+if (!minigame)
+{
+    if (!instance_exists(text))
+    {
+        text = instance_create(rect_x + rect_w/2, rect_y + rect_h/2,obj_text);
+    }
+}
+            
 if (!minigame &amp;&amp; mouse_check_button_pressed(mb_left))
 {
     minigame = true;
@@ -423,6 +436,9 @@ if (!minigame &amp;&amp; mouse_check_button_pressed(mb_left))
     }
     
     
+}
+else
+{
 }
 </string>
           </argument>

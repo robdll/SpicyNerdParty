@@ -47,6 +47,8 @@
     <sprite>sprites\spr_boy_right_bottom</sprite>
     <sprite>sprites\spr_monster</sprite>
     <sprite>sprites\spr_monster_old</sprite>
+    <sprite>sprites\spr_text_new</sprite>
+    <sprite>sprites\spr_text</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -62,6 +64,7 @@
     <path>paths\path1</path>
     <path>paths\path3</path>
   </paths>
+  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_text</font>
   </fonts>
@@ -77,13 +80,14 @@
     <object>objects\obj_bed</object>
     <object>objects\obj_box</object>
     <object>objects\obj_credits</object>
+    <object>objects\obj_text</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
-    <room>rooms\rm_0</room>
     <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
     <room>rooms\rm4_creditss</room>
+    <room>rooms\rm_0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

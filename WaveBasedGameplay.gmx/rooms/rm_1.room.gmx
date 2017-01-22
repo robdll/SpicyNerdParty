@@ -64,6 +64,7 @@
     <instance objName="obj_box" x="768" y="496" name="inst_686E0368" locked="0" code="depth = -2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="528" y="432" name="inst_F0880FC2" locked="0" code="depth = -1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="544" y="464" name="inst_22133C8F" locked="0" code="depth = -2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_text" x="624" y="240" name="inst_4A12FE4C" locked="0" code="image_index = 1;&#xA;alarm[0] = 180;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
