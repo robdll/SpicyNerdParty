@@ -493,13 +493,16 @@ if (minigame)
     {
         line_hue += 1;
         line_dist += 1;
-        line_col = make_color_hsv(line_hue,255,255);
-        draw_set_color(line_col);
-        //draw the circle
-        if (i &lt; player_dots-1)
+        if (abs(wave_dot_y[i+ (512/divider)] - player_dot_y[i]) &gt;= threshold)
         {
-            draw_line_width(player_dot_x[i], player_dot_y[i],
-                      player_dot_x[i+1],player_dot_y[i+1],5);
+            line_col = make_color_hsv(line_hue,255,255);
+            draw_set_color(line_col);
+            //draw the circle
+            if (i &lt; player_dots-1)
+            {
+                draw_line_width(player_dot_x[i], player_dot_y[i],
+                          player_dot_x[i+1],player_dot_y[i+1],5);
+            }
         }
     }
     line_hue -= line_dist-1;
