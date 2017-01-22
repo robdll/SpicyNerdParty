@@ -50,9 +50,7 @@ xspeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-x -= xspeed;
+            <string>x -= xspeed;
 if (x &lt; obj_player.rectX)
     instance_destroy();
 </string>
