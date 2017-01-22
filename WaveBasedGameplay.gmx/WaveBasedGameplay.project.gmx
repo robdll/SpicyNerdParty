@@ -15,6 +15,8 @@
     <sprite>sprites\spr_line_icon</sprite>
     <sprite>sprites\spr_pointer</sprite>
     <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\spr_distractor</sprite>
+    <sprite>sprites\spr_distractor_mask_64</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -24,6 +26,8 @@
   <paths name="paths">
     <path>paths\path0</path>
   </paths>
+  <scripts name="scripts"/>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\font_text</font>
   </fonts>
@@ -31,8 +35,10 @@
     <object>objects\obj_player</object>
     <object>objects\obj_dot</object>
     <object>objects\obj_pause</object>
+    <object>objects\obj_distractor</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm2_disruptor</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

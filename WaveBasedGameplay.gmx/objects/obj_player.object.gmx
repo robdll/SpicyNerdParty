@@ -45,7 +45,10 @@ divider = 8;
 wave_freq = .05;
 wave_amp = 48;
 wave_angle = 0;
+base_freq = .05;
+base_amp = 48;
 
+max_freq = .1;
 
 wave_power = 0;
 
@@ -207,6 +210,36 @@ else {
         sprite_index = spr_player_right_bottom;
 }        
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Distractor
+if (place_meeting(x,y,obj_distractor)){
+    wave_freq += .0001;
+    wave_freq = min(wave_freq,max_freq);
+} else {
+    if (wave_freq &gt; base_freq)
+        wave_freq -= .0001;
+    if (wave_freq &lt; base_freq)
+        wave_freq = base_freq;
+}
 </string>
           </argument>
         </arguments>
