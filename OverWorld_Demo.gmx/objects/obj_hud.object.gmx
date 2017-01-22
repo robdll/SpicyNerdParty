@@ -65,8 +65,8 @@ draw_text(16,16,"Frequency: " + string(frequency));
 draw_text(16,32,"Amplitude: " + string(amplitude));
 
 
-draw_text(128,16,"Target Frequency: " + string(freqTarget));
-draw_text(128,32,"Target Amplitude: " + string(ampTarget));
+draw_text(160,16,"Target Frequency: " + string(freqTarget));
+draw_text(160,32,"Target Amplitude: " + string(ampTarget));
 </string>
           </argument>
         </arguments>
