@@ -33,9 +33,9 @@ threshold = 16;
 minigame = false;
 //Rectangle values
 rect_w = 720;
-rect_x = view_xview + (view_wview/2) - 360;
-rect_h = 128;
-rect_y = view_yview + view_hview - rect_h - 64;
+rect_x = (view_wview/2) - 360;
+rect_h = 96;
+rect_y = view_yview + view_hview - rect_h - 48;
 
 
 //Player sine wave
@@ -51,13 +51,13 @@ wave_power = 0;
 
 for (i=0; i &lt; 512/divider; i += 1)
 {
-    player_dot_x[i] = rect_x + rect_w/2 + (i*divider);
+    player_dot_x[i] = rect_w/2 + (i*divider);
     player_dot_y[i] = rect_y + rect_h/2;
 }
 for (i=0; i&lt;1024/divider; i+=1)
 {
     
-    wave_dot_x[i] = rect_x  + rect_w/2 + (i*divider);
+    wave_dot_x[i] = rect_w/2 + (i*divider);
     wave_dot_y[i] = rect_y + rect_h/2;
 }
 wave_y = 0;
