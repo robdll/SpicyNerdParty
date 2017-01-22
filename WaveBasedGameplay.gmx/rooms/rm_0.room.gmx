@@ -54,11 +54,11 @@
     <instance objName="obj_player" x="400" y="400" name="inst_981C05C6" locked="0" code="" scaleX="2" scaleY="1.72727274894714" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="0" y="0" name="inst_E02DB5A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sound_controller" x="32" y="0" name="inst_E0071D67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_trigger" x="744" y="304" name="inst_B1794BA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_trigger" x="736" y="320" name="inst_B1794BA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="504" y="432" name="inst_4EE94FC8" locked="0" code="depth=-11;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bed" x="520" y="144" name="inst_3EF349D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_box" x="640" y="352" name="inst_8C3056BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_box" x="664" y="400" name="inst_538FE220" locked="0" code="depth=-9&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bed" x="520" y="144" name="inst_3EF349D8" locked="0" code="depth = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_box" x="640" y="352" name="inst_8C3056BF" locked="0" code="depth = -1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_box" x="664" y="400" name="inst_538FE220" locked="0" code="depth=-9" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="880" y="400" name="inst_CCFEF2D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
