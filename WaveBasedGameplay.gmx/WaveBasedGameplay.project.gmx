@@ -54,6 +54,7 @@
     <object>objects\obj_pause</object>
     <object>objects\obj_distractor</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_sound_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm2_disruptorx</room>
