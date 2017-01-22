@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>
-if (obj_player.transition_direction == 0)
+if (obj_player.transition_direction == 0 &amp;&amp; obj_player.path_index == -1)
 {
+    obj_player.path_position = 1;
     obj_player.transition_direction = -1;
     with (obj_player)
         path_end();
