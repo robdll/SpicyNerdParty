@@ -214,18 +214,15 @@ if (global.pause) exit; //Exits the code loop when 'Enter' pressed pauses the ga
         wannabeSalty = false;
     };
     
-if(!isSalty &amp;&amp; wannabeSalty &amp;&amp; wave_y &lt; 46 ){
+if(!isSalty &amp;&amp; wannabeSalty){
      wave_freq = 0.2;
      isSalty = true;
 }
 
-    
-//if (place_meeting(x,y,obj_distractor))
-//    wave_freq += .001;
-//else
-  //  wave_freq -= .001;
-
-//wave_freq = clamp(wave_freq,base_freq,max_freq);
+if(isSalty &amp;&amp; !wannabeSalty){
+     wave_freq = .05;
+     isSalty = false;
+}
 </string>
           </argument>
         </arguments>
@@ -545,6 +542,8 @@ draw_text(16,16,string(max_freq));
 draw_text(16,32,string(wave_freq));
 draw_text(16,48,string(math_get_epsilon()));
 draw_text(16,64,string(player_wave_y));
+draw_text(16,80,string(wannabeSalty));
+draw_text(16,96,string(isSalty));
 
 /*
 

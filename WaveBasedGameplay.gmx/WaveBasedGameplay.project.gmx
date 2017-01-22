@@ -57,7 +57,7 @@
     <object>objects\obj_sound_controller</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm2_disruptorx</room>
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
