@@ -51,14 +51,18 @@ wave_power = 0;
 
 for (i=0; i &lt; 512/divider; i += 1)
 {
-    player_dot_x[i] = rect_x - 132 + (i*divider);
+    player_dot_x[i] = rect_x + rect_w/2 + (i*divider);
     player_dot_y[i] = rect_y + rect_h/2;
+}
+for (i=0; i&lt;1024/divider; i+=1)
+{
     
     wave_dot_x[i] = rect_x  + rect_w/2 + (i*divider);
     wave_dot_y[i] = rect_y + rect_h/2;
 }
 wave_y = 0;
 player_dots = 512/divider;
+wave_dots = 1024/divider;
 player_wave_y = 0;
 display_mouse_set(display_get_width()/2,display_get_height()/2);
 
