@@ -294,7 +294,7 @@ if (minigame)
             <kind>1</kind>
             <string>///Set/Reset Path
 
-if (global.pause) exit;
+//if (global.pause) exit;
 
 //if (path_index == -1)
 //left click
@@ -369,7 +369,7 @@ view_yview[0]=(view_yview[0]*7+targetY)/8;
           <argument>
             <kind>1</kind>
             <string>///Draw Sine Wave Parts
-if (global.pause) exit;
+
 
 draw_text(window_get_width()/2,window_get_height()/2,"x");
 if (minigame)
