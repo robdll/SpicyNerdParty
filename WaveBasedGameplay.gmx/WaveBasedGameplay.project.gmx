@@ -63,12 +63,14 @@
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_trigger</object>
     <object>objects\obj_computed_wave</object>
+    <object>objects\obj_credits</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_0</room>
+    <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
-    <room>rooms\room_start</room>
-    <room>rooms\room0</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm4_creditss</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

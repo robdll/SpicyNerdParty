@@ -562,6 +562,7 @@ if (minigame)
           <argument>
             <kind>1</kind>
             <string>///Debug
+/*
 draw_text(16,16,string(max_freq));
 draw_text(16,32,string(wave_freq));
 draw_text(16,48,string(math_get_epsilon()));

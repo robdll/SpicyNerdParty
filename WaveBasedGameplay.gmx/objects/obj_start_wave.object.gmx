@@ -25,6 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Colors
+
+line_col = make_color_hsv(255,255,255);
+line_hue = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Ini variables]
 image_speed = 0.2;
 locked = true;
@@ -85,30 +109,6 @@ display_mouse_set(display_get_width()/2,display_get_height()/2);
 
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Colors
-
-line_col = make_color_hsv(255,255,255);
-line_hue = 0;
 </string>
           </argument>
         </arguments>
@@ -421,13 +421,16 @@ if (minigame)
     {
         line_hue += 1;
         line_dist += 1;
-        line_col = make_color_hsv(line_hue,255,255);
-        draw_set_color(line_col);
-        //draw the circle
-        if (i &lt; player_dots-1)
+        if (abs(wave_dot_y[i+ (512/divider)] - player_dot_y[i]) &gt;= threshold)
         {
-            draw_line_width(player_dot_x[i], player_dot_y[i],
-                      player_dot_x[i+1],player_dot_y[i+1],5);
+            line_col = make_color_hsv(line_hue,255,255);
+            draw_set_color(line_col);
+            //draw the circle
+            if (i &lt; player_dots-1)
+            {
+                draw_line_width(player_dot_x[i], player_dot_y[i],
+                          player_dot_x[i+1],player_dot_y[i+1],5);
+            }
         }
     }
     line_hue -= line_dist-1;
@@ -469,6 +472,7 @@ if (minigame)
           <argument>
             <kind>1</kind>
             <string>///Debug
+/*
 draw_text(16,16,string(max_freq));
 draw_text(16,32,string(wave_freq));
 draw_text(16,48,string(math_get_epsilon()));
