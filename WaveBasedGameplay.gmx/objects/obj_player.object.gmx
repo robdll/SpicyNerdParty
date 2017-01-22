@@ -54,7 +54,7 @@ for (i=0; i &lt; 512/divider; i += 1)
     player_dot_x[i] = rect_x - 132 + (i*divider);
     player_dot_y[i] = rect_y + rect_h/2;
     
-    wave_dot_x[i] = rect_x  + rect_w/2 + (i*divider);
+    wave_dot_x[i] = rect_x  + rect_w - (i*divider);
     wave_dot_y[i] = rect_y + rect_h/2;
 }
 wave_y = 0;
