@@ -55,10 +55,11 @@
   <instances>
     <instance objName="obj_player" x="416" y="464" name="inst_981C05C6" locked="0" code="" scaleX="2" scaleY="1.72727274894714" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="0" y="0" name="inst_E02DB5A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_distractor" x="544" y="320" name="inst_533CA6F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_distractor" x="608" y="384" name="inst_533CA6F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sound_controller" x="32" y="0" name="inst_6078CDCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_distractor" x="672" y="416" name="inst_03A0BD33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_distractor" x="672" y="480" name="inst_03A0BD33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_trigger" x="736" y="352" name="inst_6D9D22BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bed" x="416" y="320" name="inst_1658DDA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

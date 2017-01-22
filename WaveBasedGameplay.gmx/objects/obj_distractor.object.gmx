@@ -85,7 +85,7 @@ for (i=0; i&lt;rings; i+=1)
 {
     draw_set_color(c_red);
     draw_set_alpha(ringA[i]);
-    draw_circle(x,y-15,ringR[i],true);
+    draw_circle(x,y-80,ringR[i],true);
     draw_set_alpha(1);
     ringR[i] += 1;
     ringA[i] -= 1/(15*5);
