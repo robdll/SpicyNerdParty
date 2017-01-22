@@ -31,12 +31,15 @@ locked = true;
 power_rate = 0;
 threshold = 20;
 minigame = false;
+transition_direction = 1;
 //Rectangle values
 rect_w = 720;
 rect_x = (view_wview/2) - 360;
 rect_h = 96;
 rect_y = view_yview + view_hview - rect_h - 48;
 
+
+fadein_alpha = 1;
 
 //Player sine wave
 divider = 8;
@@ -48,7 +51,7 @@ wave_angle = 0;
 base_freq = .05;
 base_amp = 48;
 
-max_freq = .1;
+max_freq = .06;
 
 wave_power = 0;
 
@@ -231,15 +234,12 @@ else {
           <argument>
             <kind>1</kind>
             <string>///Distractor
-if (place_meeting(x,y,obj_distractor)){
-    wave_freq += .0001;
-    wave_freq = min(wave_freq,max_freq);
-} else {
-    if (wave_freq &gt; base_freq)
-        wave_freq -= .0001;
-        
-    wave_freq = max(wave_freq,base_freq);
-}
+if (place_meeting(x,y,obj_distractor))
+    wave_freq += .001;
+else
+    wave_freq -= .001;
+
+wave_freq = clamp(wave_freq,base_freq,max_freq);
 </string>
           </argument>
         </arguments>
@@ -489,6 +489,11 @@ if (minigame)
           <argument>
             <kind>1</kind>
             <string>///Debug
+draw_text(16,16,string(max_freq));
+draw_text(16,32,string(wave_freq));
+draw_text(16,48,string(math_get_epsilon()));
+/*
+
 draw_text(16,16,string(window_get_width()/2));
 draw_text(16,32,string(window_get_height()/2));
 draw_text(16,48,string(mouse_y));
@@ -497,12 +502,51 @@ draw_set_color(c_white);
 draw_text(player_dot_x[0],player_dot_y[0],"I AM DOT");
 draw_text(wave_dot_x[0],wave_dot_y[0],"I AM DOT");
 */
-
+/*
         draw_text(100, 128, string(path_position));
         draw_text( 100, 150, string(path_get_point_x(0,1)));
         
 /*
 im stuck thats it leave or stay i guess
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Fade into/out of room
+if (transition_direction == 1) // going in
+{
+    if (fadein_alpha &gt; 0)
+        fadein_alpha -= .01;
+}
+else if (transition_direction == -1) // going out 
+{
+    
+    if (fadein_alpha &lt; 1)
+        fadein_alpha += .01;
+}
+if (fadein_alpha &gt; 0)
+{
+    draw_set_alpha(fadein_alpha);
+    draw_set_color(c_white);
+    draw_rectangle(-1,-1,room_width+1,room_height+1,false);
+    draw_set_alpha(1);
+}
 </string>
           </argument>
         </arguments>
