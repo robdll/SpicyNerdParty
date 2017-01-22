@@ -56,6 +56,7 @@
     <instance objName="obj_player" x="384" y="416" name="inst_981C05C6" locked="0" code="" scaleX="2" scaleY="1.72727274894714" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="0" y="0" name="inst_E02DB5A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_distractor" x="640" y="416" name="inst_533CA6F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sound_controller" x="32" y="0" name="inst_6078CDCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
