@@ -39,6 +39,11 @@
     <sprite>sprites\spr_distractor</sprite>
     <sprite>sprites\spr_distractor_mask_64</sprite>
     <sprite>sprites\spr_trigger</sprite>
+    <sprite>sprites\spr_exclamation</sprite>
+    <sprite>sprites\spr_triggers</sprite>
+    <sprite>sprites\spr_tv</sprite>
+    <sprite>sprites\spr_bed</sprite>
+    <sprite>sprites\spr_box</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
