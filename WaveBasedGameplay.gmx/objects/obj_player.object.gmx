@@ -63,13 +63,13 @@ wave_power = 0;
 
 for (i=0; i &lt; 512/divider; i += 1)
 {
-    player_dot_x[i] = rect_w/2 + (i*divider);
+    player_dot_x[i] = rect_x + rect_w/2 + (i*divider);
     player_dot_y[i] = rect_y + rect_h/2;
 }
 for (i=0; i&lt;1024/divider; i+=1)
 {
     
-    wave_dot_x[i] = rect_w/2 + (i*divider);
+    wave_dot_x[i] = 120 + (i*divider);
     wave_dot_y[i] = rect_y + rect_h/2;
 }
 wave_y = 0;
@@ -177,7 +177,7 @@ if (global.pause) exit; //Exits the code loop when 'Enter' pressed pauses the ga
     //Computer Dots
     
     wave_y = sin(wave_angle * wave_freq) * wave_amp;
-    for (i=player_dots-1; i&gt;=0 ;i-=1)
+    for (i=wave_dots-1; i&gt;=0 ;i-=1)
     {
         wave_dot_y[i+1] = wave_dot_y[i];
     }
@@ -256,7 +256,7 @@ if (minigame)
     for (i=0; i&lt;player_dots; i +=1 )
     
     {
-        if (abs(player_dot_y[i]-wave_dot_y[i]) &lt; threshold)
+        if (abs(player_dot_y[i]-wave_dot_y[(512/divider)+i]) &lt; threshold)
         {
             percent += 1;
         }
@@ -464,15 +464,17 @@ if (minigame)
     
     ///Draw Computer Sine
     //draw_text(16,16,"Wave Power: " + string(wave_power));
-    for (i=0; i&lt;player_dots; i+=1)
+    for (i=0; i&lt;wave_dots; i+=1)
     {
         //draw the circle
-        if (i &lt; player_dots-1)
+        if (i &lt; wave_dots-1)
         {
-            if (abs(wave_dot_y[i] - player_dot_y[i]) &lt; threshold)
-                draw_set_color(c_lime);
-            else
-                draw_set_color(c_red);
+            draw_set_color(c_red);
+            if (i &gt; wave_dots / 2)
+            {
+                if (abs(wave_dot_y[i] - player_dot_y[i - (512/divider)]) &lt; threshold)
+                    draw_set_color(c_lime);
+            }
             draw_line_width(wave_dot_x[i], wave_dot_y[i],
                       wave_dot_x[i+1],wave_dot_y[i+1],4);
                       
