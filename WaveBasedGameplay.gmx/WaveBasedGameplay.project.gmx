@@ -42,7 +42,7 @@
     <sprite>sprites\spr_exclamation</sprite>
     <sprite>sprites\spr_triggers</sprite>
     <sprite>sprites\spr_tv</sprite>
-    <sprite>sprites\spr_old_bed</sprite>
+    <sprite>sprites\spr_bed</sprite>
     <sprite>sprites\spr_box</sprite>
   </sprites>
   <backgrounds name="background">
@@ -70,12 +70,13 @@
     <object>objects\obj_sound_controller</object>
     <object>objects\obj_trigger</object>
     <object>objects\obj_bed</object>
+    <object>objects\obj_box</object>
     <object>objects\obj_credits</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_0</room>
     <room>rooms\rm_1</room>
     <room>rooms\rm_start</room>
-    <room>rooms\rm_0</room>
     <room>rooms\rm_2</room>
     <room>rooms\rm4_creditss</room>
   </rooms>
