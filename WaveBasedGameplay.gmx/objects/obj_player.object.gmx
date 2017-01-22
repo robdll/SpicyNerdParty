@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Ini variables]
+
 locked = true;
 power_rate = 0;
 threshold = 32;
@@ -87,6 +88,7 @@ display_mouse_set(display_get_width()/2,display_get_height()/2);
           <argument>
             <kind>1</kind>
             <string>///Path Set
+
 path_start(0,3,0,true);
 </string>
           </argument>
@@ -109,6 +111,7 @@ path_start(0,3,0,true);
           <argument>
             <kind>1</kind>
             <string>///Colors
+
 line_col = make_color_hsv(255,255,255);
 line_hue = 0;
 </string>
@@ -135,6 +138,8 @@ line_hue = 0;
             <kind>1</kind>
             <string>///Sine Game Handling
 //if (minigame)
+
+if (global.pause) exit; //Exits the code loop when 'Enter' pressed pauses the game
 {
     ///Mouse controls and Ini Dots
     if (locked)
@@ -185,6 +190,8 @@ line_hue = 0;
           <argument>
             <kind>1</kind>
             <string>///POWER stats
+if (global.pause) exit;
+
 if (minigame)
 {
     percent = 0;
@@ -226,6 +233,9 @@ if (minigame)
           <argument>
             <kind>1</kind>
             <string>///Set/Reset Path
+
+if (global.pause) exit;
+
 if (path_index == -1)
 {
 
@@ -266,6 +276,7 @@ if (path_index == -1)
           <argument>
             <kind>1</kind>
             <string>///Camera Movement
+if (global.pause) exit;//Can't currently pause camera
 
 targetX=(x) - view_wview/2;
 targetY=(y) - view_hview/2;
@@ -294,6 +305,8 @@ view_yview[0]=(view_yview[0]*7+targetY)/8;
           <argument>
             <kind>1</kind>
             <string>///Draw Sine Wave Parts
+if (global.pause) exit;
+
 draw_text(window_get_width()/2,window_get_height()/2,"x");
 if (minigame)
 {
@@ -430,7 +443,9 @@ im stuck thats it leave or stay i guess
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>locked = !locked;
+            <string>if (global.pause) exit;
+
+locked = !locked;
 </string>
           </argument>
         </arguments>

@@ -25,15 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Ini
-
-xspeed = 0;
+            <string>global.pause = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,11 +48,50 @@ xspeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if(global.pause)
+{
+    draw_set_color(c_gray);
+    draw_set_alpha(0.5);
+    draw_rectangle(0,0, room_width, room_height,0);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_center);
+    draw_set_font(font_text);
+    draw_set_color(c_black);
+    draw_set_alpha(1);
+    draw_text(room_width/2,room_height/2,'PAUSED');
+    draw_set_color(c_black);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.pause == 0)
+{
+    global.pause = 1;
+}
 
-x -= xspeed;
-if (x &lt; obj_player.rectX)
-    instance_destroy();
+else
+{
+    global.pause = 0;
+}
 </string>
           </argument>
         </arguments>
