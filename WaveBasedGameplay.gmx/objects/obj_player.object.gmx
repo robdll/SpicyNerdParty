@@ -3,7 +3,7 @@
   <spriteName>spr_player_static</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -469,7 +469,7 @@ view_yview[0]=(view_yview[0]*7+targetY)/8;
             <string>///Draw Sine Wave Parts
 
 
-draw_text(window_get_width()/2,window_get_height()/2,"x");
+//draw_text(window_get_width()/2,window_get_height()/2,"x");
 if (minigame)
 {
     //Rectangle
