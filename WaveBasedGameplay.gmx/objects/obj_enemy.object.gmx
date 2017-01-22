@@ -55,6 +55,8 @@
             <string>
 image_angle = image_angle+2;
 
+
+
 </string>
           </argument>
         </arguments>

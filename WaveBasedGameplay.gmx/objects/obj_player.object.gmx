@@ -34,6 +34,7 @@ minigame = false;
 transition_direction = 1;
 movingForward = true;
 atStartingPoint = true;
+axis_flip = 1;
 
 isSalty = false;
 wannabeSalty =false;
@@ -164,7 +165,7 @@ if (global.pause) exit; //Exits the code loop when 'Enter' pressed pauses the ga
         window_mouse_set(window_get_width()/2,( -view_yview +(window_get_height()/2)));
         if ( abs(mouse_y - targetY) &gt; 1)
         {
-            player_wave_y += .5*( mouse_y - targetY);
+            player_wave_y += axis_flip*(.5*( mouse_y - targetY));
         }
     }
     for (i=player_dots-1; i&gt;=0 ;i-=1)
@@ -222,6 +223,20 @@ if(!isSalty &amp;&amp; wannabeSalty){
 if(isSalty &amp;&amp; !wannabeSalty){
      wave_freq = .05;
      isSalty = false;
+}
+
+
+if (place_meeting(x,y,obj_enemy))
+{
+    if (axis_flip != -1)
+        sound_play(snd_axis_neg);
+    axis_flip = -1;
+}
+else
+{
+    if (axis_flip !=1)
+        sound_play(snd_axis_pos);
+    axis_flip = 1;
 }
 </string>
           </argument>
@@ -469,7 +484,10 @@ if (minigame)
         //draw the circle
         if (i &lt; wave_dots-1)
         {
-            draw_set_color(c_red);
+            if (axis_flip == 1)
+                draw_set_color(c_red);
+            else
+                draw_set_color(c_fuchsia);
             if (i &gt; wave_dots / 2)
             {
                 if (abs(wave_dot_y[i] - player_dot_y[i - (512/divider)]) &lt; threshold)

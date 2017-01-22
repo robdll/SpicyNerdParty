@@ -35,6 +35,7 @@ transition_direction = 0;
 movingForward = true;
 atStartingPoint = true;
 global.pause = false;
+sound_loop(snd_title01);
 
 isSalty = false;
 wannabeSalty =false;
@@ -274,6 +275,7 @@ if (minigame)
     if (wave_power == 100 &amp;&amp; transition_direction != -1){
         transition_direction = -1;
         sound_play(snd_teleport);
+        sound_stop(snd_title01);
     }
     if (transition_direction == -1)
     {

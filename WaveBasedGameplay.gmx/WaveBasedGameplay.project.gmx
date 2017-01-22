@@ -8,6 +8,8 @@
     <sounds name="Noises">
       <sound>sound\snd_teleport</sound>
       <sound>sound\snd_prompt</sound>
+      <sound>sound\snd_axis_neg</sound>
+      <sound>sound\snd_axis_pos</sound>
     </sounds>
     <sounds name="Songs">
       <sound>sound\snd_title01</sound>
@@ -63,6 +65,7 @@
     <object>objects\obj_computed_wave</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_2</room>
     <room>rooms\room_start</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
