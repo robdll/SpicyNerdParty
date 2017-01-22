@@ -53,6 +53,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_start_wave</object>
     <object>objects\obj_dot</object>
     <object>objects\obj_pause</object>
     <object>objects\obj_distractor</object>
