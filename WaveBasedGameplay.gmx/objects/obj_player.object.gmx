@@ -311,7 +311,7 @@ if (path_index == -1)
             <kind>1</kind>
             <string>///Camera Movement
 if (global.pause) exit;//Can't currently pause camera
-
+/*
 targetX=(x) - view_wview/2;
 targetY=(y) - view_hview/2;
 view_xview[0]=(view_xview[0]*7+targetX)/8;//the xview is weighed *7 here. xview*7+targetX*1 --&gt; 8
