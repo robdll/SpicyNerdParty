@@ -42,7 +42,9 @@
     <sprite>sprites\spr_exclamation</sprite>
     <sprite>sprites\spr_triggers</sprite>
     <sprite>sprites\spr_tv</sprite>
+    <sprite>sprites\spr_old_tv</sprite>
     <sprite>sprites\spr_bed</sprite>
+    <sprite>sprites\spr_old_bed</sprite>
     <sprite>sprites\spr_box</sprite>
   </sprites>
   <backgrounds name="background">
