@@ -281,8 +281,11 @@ if (minigame)
         }
         wave_power -= .1;
     }
-    if (path_index == -1)
-        path_start(path0,1,0,true);
+    if (transition_direction == 0)
+    {
+        if (path_index == -1)
+            path_start(path0,1,0,true);
+    }
         
         /*
     if (abs(player_dot_y[player_dots]-wave_dot_y[player_dots]) &lt; threshold)
@@ -591,7 +594,9 @@ else if (transition_direction == -1) // going out
 {
     
     if (fadein_alpha &lt; 1)
-        fadein_alpha += .01;
+        fadein_alpha += .005;
+    if (fadein_alpha &gt;= 1)
+        room_goto_next();
 }
 if (fadein_alpha &gt; 0)
 {
@@ -600,6 +605,8 @@ if (fadein_alpha &gt; 0)
     draw_rectangle(-1,-1,room_width+1,room_height+1,false);
     draw_set_alpha(1);
 }
+else
+    transition_direction = 0;
 </string>
           </argument>
         </arguments>

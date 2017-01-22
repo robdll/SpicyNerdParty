@@ -36,6 +36,7 @@
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\spr_distractor</sprite>
     <sprite>sprites\spr_distractor_mask_64</sprite>
+    <sprite>sprites\spr_trigger</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -55,6 +56,7 @@
     <object>objects\obj_distractor</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_sound_controller</object>
+    <object>objects\obj_trigger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
