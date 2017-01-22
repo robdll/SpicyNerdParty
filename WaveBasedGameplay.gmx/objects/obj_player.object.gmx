@@ -29,7 +29,7 @@
 image_speed = 0.2;
 locked = true;
 power_rate = 0;
-threshold = 16;
+threshold = 20;
 minigame = false;
 //Rectangle values
 rect_w = 720;
@@ -93,7 +93,7 @@ display_mouse_set(display_get_width()/2,display_get_height()/2);
             <kind>1</kind>
             <string>///Path Set
 
-path_start(0,3,0,true);
+//path_start(0,3,0,true);
 </string>
           </argument>
         </arguments>
@@ -246,10 +246,21 @@ if (minigame)
     percent = percent / player_dots;
     
     if (percent &gt; .5)
-        wave_power += .1;
+    {
+        path_speed = 1;
+        wave_power += .2;
+    }
     else
-        wave_power -= .05;
-        
+    {
+        if (path_position &gt; .03)
+            path_speed = -.5;
+        else
+            path_speed = 0;
+            
+        wave_power -= .1;
+    }
+    if (path_index == -1)
+        path_start(path0,1,0,true);
         
         /*
     if (abs(player_dot_y[player_dots]-wave_dot_y[player_dots]) &lt; threshold)
@@ -285,11 +296,13 @@ if (minigame)
 
 if (global.pause) exit;
 
-if (path_index == -1)
+//if (path_index == -1)
+//left click
+if (!minigame &amp;&amp; mouse_check_button_pressed(mb_left))
 {
 
     minigame = true;
-    /*
+    
     if (wave_power == 100)
     {
         wave_power = 0;
@@ -304,7 +317,7 @@ if (path_index == -1)
         }
     }
     
-    */
+    
 }
 </string>
           </argument>
@@ -446,10 +459,15 @@ if (minigame)
 draw_text(16,16,string(window_get_width()/2));
 draw_text(16,32,string(window_get_height()/2));
 draw_text(16,48,string(mouse_y));
-
+/*
 draw_set_color(c_white);
 draw_text(player_dot_x[0],player_dot_y[0],"I AM DOT");
 draw_text(wave_dot_x[0],wave_dot_y[0],"I AM DOT");
+*/
+
+        draw_text(100, 128, string(path_position));
+        draw_text( 100, 150, string(path_get_point_x(0,1)));
+        
 /*
 im stuck thats it leave or stay i guess
 </string>
