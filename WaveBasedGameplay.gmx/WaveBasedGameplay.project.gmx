@@ -44,6 +44,7 @@
     <sprite>sprites\spr_tv</sprite>
     <sprite>sprites\spr_old_bed</sprite>
     <sprite>sprites\spr_box</sprite>
+    <sprite>sprites\spr_boy_right_bottom</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
