@@ -35,6 +35,9 @@ transition_direction = 1;
 movingForward = true;
 atStartingPoint = true;
 
+isSalty = false;
+wannabeSalty =false;
+
 //Rectangle values
 rect_w = 720;
 rect_x = (view_wview/2) - 360;
@@ -203,12 +206,26 @@ if (global.pause) exit; //Exits the code loop when 'Enter' pressed pauses the ga
           <argument>
             <kind>1</kind>
             <string>///Distractor
-if (place_meeting(x,y,obj_distractor))
-    wave_freq += .001;
-else
-    wave_freq -= .001;
 
-wave_freq = clamp(wave_freq,base_freq,max_freq);
+    if(place_meeting(x,y,obj_distractor)){
+        wannabeSalty = true;
+    }
+    else{
+        wannabeSalty = false;
+    };
+    
+if(!isSalty &amp;&amp; wannabeSalty &amp;&amp; wave_y &lt; 46 ){
+     wave_freq = 0.2;
+     isSalty = true;
+}
+
+    
+//if (place_meeting(x,y,obj_distractor))
+//    wave_freq += .001;
+//else
+  //  wave_freq -= .001;
+
+//wave_freq = clamp(wave_freq,base_freq,max_freq);
 </string>
           </argument>
         </arguments>
@@ -525,6 +542,8 @@ if (minigame)
 draw_text(16,16,string(max_freq));
 draw_text(16,32,string(wave_freq));
 draw_text(16,48,string(math_get_epsilon()));
+draw_text(16,64,string(player_wave_y));
+
 /*
 
 draw_text(16,16,string(window_get_width()/2));
