@@ -73,9 +73,9 @@
     <object>objects\obj_credits</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_1</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_0</room>
-    <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
     <room>rooms\rm4_creditss</room>
   </rooms>
