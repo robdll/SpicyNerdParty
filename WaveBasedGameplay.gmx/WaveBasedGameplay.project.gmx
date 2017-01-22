@@ -38,7 +38,7 @@
     <object>objects\obj_distractor</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm2_disruptor</room>
+    <room>rooms\rm2_disruptorx</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
