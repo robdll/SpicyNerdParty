@@ -299,7 +299,14 @@ if (minigame)
     if (transition_direction == 0)
     {
         if (path_index == -1)
-            path_start(path0,1,0,true);
+        {
+            if (room == rm_0)
+                path_start(path0,1,0,true);
+            if (room == rm_1)
+                path_start(path1,1,0,true);
+            if (room == rm_2)
+                path_start(path3,1,0,true);
+        }
     }
         
         /*
