@@ -51,6 +51,8 @@
     <background>background\back2</background>
     <background>background\Start</background>
     <background>background\credits</background>
+    <background>background\back_room_pink</background>
+    <background>background\back_room_green</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
