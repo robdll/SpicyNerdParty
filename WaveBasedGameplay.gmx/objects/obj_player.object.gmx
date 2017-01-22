@@ -42,8 +42,8 @@ rect_y = view_yview + view_hview - rect_h - 48;
 divider = 8;
 
 //Target sine wave
-wave_freq = .25;
-wave_amp = 64;
+wave_freq = .05;
+wave_amp = 48;
 wave_angle = 0;
 
 
